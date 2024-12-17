@@ -1,0 +1,528 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Media Defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Font Inheritance for Form Controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Text Handling */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Root Stacking Context */
+#root, #__next {
+  isolation: isolate;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Prevent Font Size Inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Root Theme Variables */
+:root {
+  /* Primary Colors */
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  /* Neutral Colors */
+  --very-light-gray: hsl(0, 0%, 98%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+  /* Dark Theme Colors */
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --light-grayish-blue-dark: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue-dark: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue-dark: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-dark-2: hsl(237, 14%, 26%);
+}
+
+/* Theme Variables */
+.theme-dark {
+  --bg-top-image: url(../assets/images/bg-desktop-dark.jpg) no-repeat;
+  --main-bg: hsl(235, 21%, 11%);
+  --todo-bg: hsl(235, 24%, 19%);
+  --todo-shadow: hsl(235, 21%, 11%);
+  --font-color: hsl(234, 39%, 85%);
+  --font-color-hover: #fff;
+  --footer-font-color: hsl(233, 14%, 35%);
+  --todoBtns-font-color: hsl(233, 14%, 35%);
+  --todoBtns-font-hover: hsl(236, 33%, 92%);
+  --todoBtn-active: hsl(220, 98%, 61%);
+  --header-heading: hsl(0, 0%, 98%);
+  --addnewtodo-bg: hsl(235, 24%, 19%);
+  --addnewtodo-color: hsl(237, 14%, 26%);
+  --border-bottom: hsl(237, 14%, 26%);
+  --input-color: hsl(0, 0%, 98%);
+  --todo-btns-bg: hsl(235, 24%, 19%);
+}
+
+.theme-light {
+  --bg-top-image: url(../assets/images/bg-desktop-light.jpg) no-repeat;
+  --main-bg: hsl(0, 0%, 98%);
+  --todo-bg: hsl(236, 33%, 92%);
+  --todo-shadow: hsl(235, 19%, 35%);
+  --font-color: hsl(235, 21%, 15%);
+  --footer-font-color: hsl(236, 9%, 61%);
+  --todoBtns-font-color: hsl(236, 9%, 61%);
+  --todoBtns-font-hover: hsl(235, 19%, 35%);
+  --todoBtn-active: hsl(220, 98%, 61%);
+  --font-color-hover: hsl(235, 21%, 11%);
+  --header-heading: hsl(0, 0%, 98%);
+  --addnewtodo-bg: hsl(236, 33%, 92%);
+  --addnewtodo-color: hsl(235, 21%, 15%);
+  --input-color: hsl(235, 19%, 35%);
+  --todo-btns-bg: hsl(236, 33%, 92%);
+}
+
+/* General Styles */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-bg);
+}
+
+.todo-list {
+  margin-top: 4rem;
+}
+.todo-list .todo-header,
+.todo-list .todo-main,
+.todo-list .todo-footer {
+  width: 36.785rem;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 430px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-bg);
+  }
+  .todo-list {
+    margin-top: 2rem;
+    margin-inline: auto;
+  }
+  .todo-list .todo-header,
+  .todo-list .todo-main,
+  .todo-list .todo-footer {
+    width: 80vw;
+  }
+}
+/* Background for Desktop */
+.body-bg {
+  background: var(--bg-top-image);
+  width: 100%;
+  height: 15.87rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background-size: cover;
+}
+
+/* Media Query for Smaller Screens (max-width: 430px) */
+@media (max-width: 430px) {
+  .theme-dark .body-bg {
+    background: url(../assets/images/bg-mobile-dark.jpg) no-repeat center;
+    background-size: cover;
+    height: 10rem;
+  }
+  .theme-light .body-bg {
+    background: url(../assets/images/bg-mobile-light.jpg) no-repeat center;
+    background-size: cover;
+    height: 10rem;
+  }
+}
+.todo-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.todo-header .header-heading {
+  font-size: 2.5rem;
+  color: var(--header-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  font-weight: 700;
+}
+.todo-header .theme-block #theme {
+  width: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.todo-header .theme-block #theme + label::before {
+  content: "";
+  background: url(../../assets/images/icon-sun.svg) center no-repeat;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+.todo-header .theme-block #theme:checked + label::before {
+  background: url(../../assets/images/icon-moon.svg) center no-repeat;
+}
+.todo-header .theme-block .theme-logo {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+}
+
+@media screen and (max-width: 430px) {
+  .todo-header .header-heading {
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+  }
+}
+.main-items-bg {
+  background: var(--todo-bg);
+  border-radius: 0.4rem;
+}
+
+.active-check {
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.todo-main .add-new-item {
+  border-radius: 0.4rem;
+  background: var(--addnewtodo-bg);
+  padding: 1rem 2rem;
+  color: var(--font-color);
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.todo-main .add-new-item span {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 1px solid var(--font-color);
+  display: inline-block;
+  vertical-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.todo-main .add-new-item span:hover {
+  background: center url(./images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo-main .add-new-item #add-item {
+  color: var(--font-color);
+  border: 0;
+  display: flex;
+  flex-grow: 1;
+  outline: 0;
+  width: 100%;
+  background: var(--addnewtodo-bg);
+}
+.todo-main .todo-hero {
+  background: var(--todo-bg);
+  border-radius: 0.4rem;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-bottom);
+  position: relative;
+  color: var(--font-color);
+  transition: all 0.2s ease-in-out;
+  cursor: grab;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item.dragging {
+  opacity: 0.5;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item.drop-target {
+  border: 2px dashed #3a7bfd;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item:hover .delete-btn {
+  display: block;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item input[type=checkbox] {
+  display: none;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item input[type=checkbox]:checked ~ .custom-checkmark {
+  background: center url(../../assets/images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item input[type=checkbox]:checked ~ .to-do-text {
+  text-decoration: line-through;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item .custom-checkmark {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 1px solid var(--font-color);
+  display: inline-block;
+  vertical-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item .custom-checkmark img {
+  display: none;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item .custom-checkmark:hover {
+  background: center url(./images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item .to-do-text {
+  margin-left: 2rem;
+}
+.todo-main .todo-hero .todo-content .todo-items .delete-btn {
+  display: none;
+}
+.todo-main .todo-hero .todo-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: var(--todoBtns-font-color);
+}
+.todo-main .todo-hero .todo-btns .filters .filter {
+  border: none;
+  background-color: var(--todo-btns-bg);
+  outline: none;
+  padding-left: 0.5rem;
+  color: var(--todoBtns-font-color);
+}
+.todo-main .todo-hero .todo-btns .filters .filter.active {
+  color: var(--todoBtn-active);
+}
+.todo-main .todo-hero .todo-btns .filters .filter:hover {
+  color: var(--todoBtns-font-hover);
+}
+.todo-main .todo-hero .todo-btns .clear-btn {
+  border: none;
+  background-color: var(--todo-btns-bg);
+  outline: none;
+  color: var(--todoBtns-font-color);
+}
+.todo-main .todo-hero .todo-btns .clear-btn:hover {
+  color: var(--todoBtns-font-hover);
+}
+
+@media screen and (max-width: 430px) {
+  .todo-main .add-new-item {
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  .todo-main .add-new-item span {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: center;
+  }
+  .todo-main .add-new-item #add-item::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  .todo-main .add-new-item #add-item::placeholder {
+    font-size: 1.2rem;
+  }
+  .todo-main .todo-hero .todo-content .todo-items .todo-item {
+    padding: 1rem 1.2rem;
+  }
+  .todo-main .todo-hero .todo-content .todo-items .todo-item .list-item {
+    font-size: 1.2rem;
+  }
+  .todo-main .todo-hero .todo-content .todo-items .todo-item .custom-checkmark {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  .todo-main .todo-hero .todo-content .todo-items .todo-item .custom-checkmark .to-do-text {
+    margin-left: 1rem;
+  }
+  .todo-main .todo-hero .todo-btns {
+    position: relative;
+  }
+  .todo-main .todo-hero .todo-btns .filters {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    border-radius: 0.4rem;
+    background: var(--addnewtodo-bg);
+    color: var(--font-color);
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+/* footer */
+.todo-footer p {
+  font-size: 0.8rem;
+  color: var(--footer-font-color);
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 430px) {
+  p {
+    position: absolute;
+    bottom: 22rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */

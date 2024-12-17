@@ -1,0 +1,163 @@
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor; // Default for unstyled links
+}
+
+/* Media Defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Font Inheritance for Form Controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Text Handling */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Root Stacking Context */
+#root, #__next {
+  isolation: isolate;
+}
+
+textarea:not([rows]) {
+  min-height: 10em; // Default height for textareas without rows attribute
+}
+
+/* Prevent Font Size Inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Root Theme Variables */
+:root {
+  /* Primary Colors */
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+  /* Neutral Colors */
+  --very-light-gray: hsl(0, 0%, 98%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  /* Dark Theme Colors */
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --light-grayish-blue-dark: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue-dark: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue-dark: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-dark-2: hsl(237, 14%, 26%);
+}
+
+/* Theme Variables */
+.theme-dark {
+  --bg-top-image: url(../assets/images/bg-desktop-dark.jpg) no-repeat;
+  --main-bg: hsl(235, 21%, 11%);
+  --todo-bg: hsl(235, 24%, 19%);
+  --todo-shadow: hsl(235, 21%, 11%);
+  --font-color: hsl(234, 39%, 85%);
+  --font-color-hover: #fff;
+  --footer-font-color: hsl(233, 14%, 35%);
+  --todoBtns-font-color: hsl(233, 14%, 35%);
+  --todoBtns-font-hover: hsl(236, 33%, 92%);
+  --todoBtn-active: hsl(220, 98%, 61%);
+  --header-heading: hsl(0, 0%, 98%);
+  --addnewtodo-bg: hsl(235, 24%, 19%);
+  --addnewtodo-color: hsl(237, 14%, 26%);
+  --border-bottom: hsl(237, 14%, 26%);
+  --input-color: hsl(0, 0%, 98%);
+  --todo-btns-bg: hsl(235, 24%, 19%);
+}
+
+.theme-light {
+  --bg-top-image: url(../assets/images/bg-desktop-light.jpg) no-repeat;
+  --main-bg: hsl(0, 0%, 98%);
+  --todo-bg: hsl(236, 33%, 92%);
+  --todo-shadow: hsl(235, 19%, 35%);
+  --font-color: hsl(235, 21%, 15%);
+  --footer-font-color: hsl(236, 9%, 61%);
+  --todoBtns-font-color: hsl(236, 9%, 61%);
+  --todoBtns-font-hover: hsl(235, 19%, 35%);
+  --todoBtn-active: hsl(220, 98%, 61%);
+  --font-color-hover: hsl(235, 21%, 11%);
+  --header-heading: hsl(0, 0%, 98%);
+  --addnewtodo-bg: hsl(236, 33%, 92%);
+  --addnewtodo-color: hsl(235, 21%, 15%);
+  --input-color: hsl(235, 19%, 35%);
+  --todo-btns-bg: hsl(236, 33%, 92%);
+}
+
+/* General Styles */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-bg);
+}
+
+.todo-list {
+  margin-top: 4rem;
+
+  .todo-header,
+  .todo-main,
+  .todo-footer {
+    width: 36.785rem;
+  }
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 430px) {
+  body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-bg);
+}
+
+  .todo-list {
+    margin-top: 2rem;
+    margin-inline: auto;
+    .todo-header,
+    .todo-main,
+    .todo-footer {
+      width: 80vw;
+    }
+  }
+}

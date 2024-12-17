@@ -1,0 +1,28 @@
+/* Background for Desktop */
+.body-bg {
+  background: var(--bg-top-image);
+  width: 100%;
+  height: 15.87rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background-size: cover;
+}
+
+/* Media Query for Smaller Screens (max-width: 430px) */
+@media (max-width: 430px) {
+  .theme-dark .body-bg {
+    background: url(../assets/images/bg-mobile-dark.jpg) no-repeat center;
+    background-size: cover;
+    height: 10rem;
+  }
+
+  .theme-light .body-bg {
+    background: url(../assets/images/bg-mobile-light.jpg) no-repeat center;
+    background-size: cover;
+    height: 10rem;
+  }
+}
+
+

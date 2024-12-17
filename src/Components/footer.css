@@ -1,0 +1,18 @@
+/* footer */
+.todo-footer p {
+  font-size: 0.8rem;
+  color: var(--footer-font-color);
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 430px) {
+  p {
+    position: absolute;
+    bottom: 22rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}/*# sourceMappingURL=footer.css.map */

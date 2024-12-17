@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <!-- <script type="module" src="./src/firebase.js" defer></script> -->
+    <script src="./src/script.js" defer></script>
+  </head>
+
+  <body class="theme-dark">
+    <div class="todo-list">
+      <div class="body-bg"></div>
+      <header class="todo-header">
+        <h1 class="header-heading">todo</h1>
+        <div class="theme-block">
+          <input type="checkbox" name="theme" id="theme" />
+          <label for="theme">
+          </label>
+        </div>
+      </header>
+
+      <main class="todo-main">
+        <section class="add-new-item">
+          <span></span>
+          <form>
+            <input
+              type="text"
+              class="add-item"
+              id="add-item"
+              placeholder="Create a new todo..."
+            />
+          </form>
+        </section>
+        <div class="todo-hero">
+          <section class="todo-content">
+            <ul class="todo-items">
+              <li class="todo-item" draggable="true">
+                <label class="list-item">
+                  <input type="checkbox" checked />
+                  <span class="custom-checkmark">
+                  </span>
+                  <div class="to-do-text">Complete online js course</div>
+                </label>
+                <span class="delete-btn">
+                  <img src="./assets/images/icon-cross.svg" alt="delete-btn" />
+                </span>
+              </li>
+               <li class="todo-item" draggable="true">
+                <label class="list-item">
+                  <input type="checkbox"  />
+                  <span class="custom-checkmark">
+                  </span>
+                  <div class="to-do-text">Jog around the park 3x</div>
+                </label>
+                <span class="delete-btn">
+                  <img src="./assets/images/icon-cross.svg" alt="delete-btn" />
+                </span>
+              </li>
+               <li class="todo-item" draggable="true">
+                <label class="list-item">
+                  <input type="checkbox"  />
+                  <span class="custom-checkmark">
+                  </span>
+                  <div class="to-do-text">10 mins meditation</div>
+                </label>
+                <span class="delete-btn">
+                  <img src="./assets/images/icon-cross.svg" alt="delete-btn" />
+                </span>
+              </li>
+              <li class="todo-item" draggable="true">
+                <label class="list-item">
+                  <input type="checkbox"  />
+                  <span class="custom-checkmark">
+                  </span>
+                  <div class="to-do-text">Read for one hour</div>
+                </label>
+                <span class="delete-btn">
+                  <img src="./assets/images/icon-cross.svg" alt="delete-btn" />
+                </span>
+              </li>
+            </ul>
+          </section>
+          <section class="todo-btns">
+            <span>5 items left</span>
+            <div class="filters">
+              <input type="button" name="filter" id="All" value="All" data-filter="All"  class="filter active">
+               <input type="button" name="filter" id="Active" value="Active" data-filter="Active" class="filter" >
+                <input type="button" name="filter" id="Completed" value="Completed" data-filter="Completed" class="filter" >
+            </div>
+            <input type="button" name="filter" id="clear-completed" value="Clear Completed" data-filter="Clear Completed" class="filter clear-btn">
+          </section>
+        </div>
+      </main>
+
+      <footer class="todo-footer">
+        <p>drag and drop to reorder list</p>
+      </footer>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Shivani Charan</a>.
+    </div>
+  </body>
+
+</html>

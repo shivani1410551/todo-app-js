@@ -1,0 +1,193 @@
+.main-items-bg {
+  background: var(--todo-bg);
+  border-radius: 0.4rem;
+}
+
+.active-check {
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.todo-main .add-new-item {
+  border-radius: 0.4rem;
+  background: var(--addnewtodo-bg);
+  padding: 1rem 2rem;
+  color: var(--font-color);
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.todo-main .add-new-item span {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 1px solid var(--font-color);
+  display: inline-block;
+  vertical-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.todo-main .add-new-item span:hover {
+  background: center url(./images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo-main .add-new-item #add-item {
+  color: var(--font-color);
+  border: 0;
+  display: flex;
+  flex-grow: 1;
+  outline: 0;
+  width: 100%;
+  background: var(--addnewtodo-bg);
+}
+.todo-main .todo-hero {
+  background: var(--todo-bg);
+  border-radius: 0.4rem;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-bottom);
+  position: relative;
+  color: var(--font-color);
+  transition: all 0.2s ease-in-out;
+  cursor: grab;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item.dragging {
+  opacity: 0.5;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item.drop-target {
+  border: 2px dashed #3a7bfd;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item:hover .delete-btn {
+  display: block;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item input[type=checkbox] {
+  display: none;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item input[type=checkbox]:checked ~ .custom-checkmark {
+  background: center url(../../assets/images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item input[type=checkbox]:checked ~ .to-do-text {
+  text-decoration: line-through;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item .custom-checkmark {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 1px solid var(--font-color);
+  display: inline-block;
+  vertical-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item .custom-checkmark img {
+  display: none;
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item .custom-checkmark:hover {
+  background: center url(./images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo-main .todo-hero .todo-content .todo-items .todo-item .list-item .to-do-text {
+  margin-left: 2rem;
+}
+.todo-main .todo-hero .todo-content .todo-items .delete-btn {
+  display: none;
+}
+.todo-main .todo-hero .todo-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: var(--todoBtns-font-color);
+}
+.todo-main .todo-hero .todo-btns .filters .filter {
+  border: none;
+  background-color: var(--todo-btns-bg);
+  outline: none;
+  padding-left: 0.5rem;
+  color: var(--todoBtns-font-color);
+}
+.todo-main .todo-hero .todo-btns .filters .filter.active {
+  color: var(--todoBtn-active);
+}
+.todo-main .todo-hero .todo-btns .filters .filter:hover {
+  color: var(--todoBtns-font-hover);
+}
+.todo-main .todo-hero .todo-btns .clear-btn {
+  border: none;
+  background-color: var(--todo-btns-bg);
+  outline: none;
+  color: var(--todoBtns-font-color);
+}
+.todo-main .todo-hero .todo-btns .clear-btn:hover {
+  color: var(--todoBtns-font-hover);
+}
+
+@media screen and (max-width: 430px) {
+  .todo-main .add-new-item {
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  .todo-main .add-new-item span {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: center;
+  }
+  .todo-main .add-new-item #add-item::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  .todo-main .add-new-item #add-item::placeholder {
+    font-size: 1.2rem;
+  }
+  .todo-main .todo-hero .todo-content .todo-items .todo-item {
+    padding: 1rem 1.2rem;
+  }
+  .todo-main .todo-hero .todo-content .todo-items .todo-item .list-item {
+    font-size: 1.2rem;
+  }
+  .todo-main .todo-hero .todo-content .todo-items .todo-item .custom-checkmark {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  .todo-main .todo-hero .todo-content .todo-items .todo-item .custom-checkmark .to-do-text {
+    margin-left: 1rem;
+  }
+  .todo-main .todo-hero .todo-btns {
+    position: relative;
+  }
+  .todo-main .todo-hero .todo-btns .filters {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    border-radius: 0.4rem;
+    background: var(--addnewtodo-bg);
+    color: var(--font-color);
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
