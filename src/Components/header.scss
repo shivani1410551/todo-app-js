@@ -21,13 +21,13 @@
     display: none;
     &+label::before{
       content: '';
-      background:url("./assets/images/icon-sun.svg") center no-repeat;
+      background:url("../../assets/images/icon-sun.svg") center no-repeat;
       display: block;
       width:2rem;
       height:2rem;
     }
     &:checked +label::before{
-      background: url('./assets/images/icon-moon.svg') center no-repeat;
+      background: url('../../assets/images/icon-moon.svg') center no-repeat;
     }
     }
     .theme-logo{
